@@ -1,0 +1,18 @@
+/* 3. Construa um programa em C que receba 3 valores X, Y e Z reais e mostre uma mensagem na tela
+informando se a soma entre X e Y é menor, maior ou igual a Z. */
+#include <stdio.h>
+int main () {
+    float x, y, z, soma;
+    printf ("insira 3 valores reais :\n");
+    scanf ("%f", &x);
+    scanf ("%f", &y);
+    scanf ("%f", &z);
+    soma=x+y;
+    if (soma<z){
+        printf ("a soma é menor que %.2f", z);
+    }else if (soma==z){
+        printf ("a soma é igual a %.2f", z);
+    }else{
+        printf ("a soma é maior que %.2f", z);
+    }return 0;
+}
