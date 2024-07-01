@@ -1,0 +1,17 @@
+/* 5. Faça um programa em C que leia dois números reais e indique se são iguais ou diferentes. Mostre
+o Maior e o menor respectivamente.
+*/
+#include <stdio.h>
+int main () {
+    float a, b;
+    printf ("insira 2 números reais :\n");
+    scanf ("%f", &a);
+    scanf ("%f", &b);
+    if (a==b){
+        printf ("os números são iguais !!");
+    }else if (a<b){
+        printf ("%.2f %.2f", b, a);
+    }else{
+        printf ("%.2f %.2f", a, b);
+    }return 0;
+}
