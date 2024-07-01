@@ -1,0 +1,32 @@
+/*2. Faça um programa que leia 3 números inteiros, verifique se e eles são diferentes e os imprima em
+ordem crescente. Caso dois ou mais números sejam iguais, apresente uma mensagem adequada
+ao usuário.*/
+#include <stdio.h>
+int main () {
+    int a, b, c;
+    printf ("insira 3 números inteiros : ");
+    scanf ("%i", &a);
+    scanf ("%i", &b);
+    scanf ("%i", &c);
+    if ((a==b)&&(a==c)){
+        printf ("os 3 números são iguais !!");
+    }else if ((a==b)&&(a!=c)){
+        printf ("o primeiro número é igual ao segundo !!");
+    }else if ((a!=b)&&(b==c)){
+        printf ("o segundo número é igual ao terceiro !!");
+    }else if ((a==c)&&(a!=b)){
+        printf ("o primeiro número é igual ao terceiro !!");
+    }else if ((a>b)&&(b>c)){
+        printf ("%i %i %i", c, b, a);
+    }else if ((a>c)&&(c>b)){
+        printf ("%i %i %i", b, c, a);
+    }else if ((b>a)&&(a>c)){
+        printf ("%i %i %i", c, a, b);
+    }else if ((b>c)&&(c>a)){
+        printf ("%i %i %i", a, c, b);
+    }else if ((c>a)&&(a>b)){
+        printf ("%i %i %i", b, a, c);
+    }else if ((c>b)&&(b>a)){
+        printf ("%i %i %i", a, b, c);
+    }
+    }
