@@ -1,0 +1,19 @@
+/* 1. Escreva um programa em C que receba um número inteiro e imprima na tela “F1”, “F2” ou “F3”,
+conforme as condições abaixo:
+a) F1 se n <= 10
+b) F2 se n > 10 e n <= 100
+c) F3 se n > 100 */
+#include <stdio.h>
+int main () {
+    int a;
+    printf ("informe um número : ");
+    scanf ("%i", &a);
+    if (a<=10){
+        printf ("F1");
+    }else if ((a>10)&&(a<=100)) {
+        printf ("F2");
+    }else{
+        printf ("F3");
+    }
+    return 0;
+}
