@@ -1,0 +1,56 @@
+/* 7. Uma lanchonete em FW deseja informatizar o seu sistema de pedidos. Escreva um programa que
+leia o código do item pedido, calcule o valor a ser pago e apresente o valor total do lanche.
+Considere que apenas um tipo de lanche pode ser pedido por vez. Use uma estrutura de caso para
+apresentar o menu.
+Código      Lanche                  Preço
+10      Xis Completo               R$ 12,00
+11      Xis Bacon                  R$ 16,50
+12      Xis de Coração de boi      R$ 14,00
+13      Xis de Charque             R$ 14,50
+14      Xis de Ovelha              R$ 20,90
+15      Xis de linguiça campeira   R$ 18,00 */
+#include <stdio.h>
+int main (){
+    int codigo, quantidade;
+    float total;
+    printf ("Código      Lanche                  Preço\n");
+    printf ("10      Xis Completo               R$ 12,00\n");
+    printf ("11      Xis Bacon                  R$ 16,50\n");
+    printf ("12      Xis de Coração de boi      R$ 14,00\n");
+    printf ("13      Xis de Charque             R$ 14,50\n");
+    printf ("14      Xis de Ovelha              R$ 20,90\n");
+    printf ("15      Xis de linguiça campeira   R$ 18,00\n\n");
+    printf ("insira o código do lanche que você deseja :\n");
+    scanf ("%i", &codigo);
+    printf ("insira a quantidade de lanches que você deseja :\n");
+    scanf ("%i", &quantidade);
+    switch (codigo){
+        case 10:
+        total=quantidade*12;
+        printf ("Xis Completo, o valor é de : R$ %.2f", total);
+        break;
+        case 11:
+        total=quantidade*16.5;
+        printf ("Xis Bacon, o valor é de : R$ %.2f", total);
+        break;
+        case 12:
+        total=quantidade*14;
+        printf ("Xis de Coração de boi, o valor é de : R$ %.2f", total);
+        break;
+        case 13:
+        total=quantidade*14.5;
+        printf ("Xis de Charque, o valor é de : R$ %.2f", total);
+        break;
+        case 14:
+        total=quantidade*20.9;
+        printf ("Xis de Ovelha, o valor é de : R$ %.2f", total);
+        break;
+        case 15:
+        total=quantidade*18;
+        printf ("Xis de linguiça campeira, o valor é de : R$ %.2f", total);
+        break;
+        default: {
+            printf("ERRO");
+            return 0;
+    }}return 0;
+}
