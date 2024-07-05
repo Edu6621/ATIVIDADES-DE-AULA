@@ -1,0 +1,39 @@
+/*5. Crie um programa que contenha uma estrutura de caso para apresentar um menu com as opções
+descritas abaixo. O programa deve receber um número real e apresentar o resultado da operação
+no final da execução.
+a. Raiz quadrada
+b. Metade do valor
+c. 10% do valor
+d. Dobro do valor */
+#include <stdio.h>
+#include <math.h>
+int main (){
+    double a1;
+    char c;
+    printf ("informe um número : ");
+    scanf ("%lf", &a1);
+    printf ("escolha uma opção :\na) Raiz quadrada\nb) Metade do valor\nc) 10 porcento do valor\nd) Dobro do valor\n");
+    scanf ("%s", &c);
+    switch (c){
+        case 'a':
+        a1=sqrt(a1);
+        printf ("%.0lf", a1);
+        break;
+        case 'b':
+        a1=a1/2;
+        printf ("%.2lf", a1);
+        break;
+        case 'c':
+        a1=a1*0.10;
+        printf ("%.2lf", a1);
+        break;
+        case 'd':
+        a1=a1*2;
+        printf ("%.2lf", a1);
+        break;
+        default:
+        printf ("erro");
+        return 0;
+    }
+    
+}
