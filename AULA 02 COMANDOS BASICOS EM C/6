@@ -1,13 +1,25 @@
+/* 6) Escreva um algoritmo que receba um valor em Real e a cotação do Dólar, calcule a conversão do valor e,
+como saída, apresente o valor a ser convertido (R$), a cotação do Dólar e o valor da conversão ($).
+Exemplo:
+	Entrada:
+		Informe a cotação do Dólar: 3,81
+		Informe a quantidade de Reais a ser convertida: 15
+	Saída:
+		Cotação do Dólar: R$ 3,81
+		Valor em Real: R$ 15,00
+		Valor em Dólar: $ 3,93
+
+*/
 #include <stdio.h>
-int main(){
-    float dol,re,conv;
-    printf("informe a cotação do dollar ");
-    scanf("%f",&dol);
-    printf("informe a quantidade de reais a serem convertidos ");
-    scanf("%f",&re);
-    printf("\n-------------------------\n");
-    printf("Cotaçao do dollar,%2.f",dol);
-    printf("\nQuantidade de reais,%2.f",re);
-    conv=re/dol;
-    printf("\nVoce pode converter %2.f reias em %2.f dollares",re,conv);
+int main () {
+    float real, cotacao, dolar;
+    printf ("informe a cotação do dolar : R$ ");
+    scanf ("%f", &cotacao);
+    printf ("informe a quantidade de reais a ser convertida : R$ ");
+    scanf ("%f", &real);
+    dolar=real*cotacao;
+    printf ("Cotação do Dólar : R$ %.2f\n", cotacao);
+    printf ("Valor em Real : R$ %.2f\n", real);
+    printf ("Valor em Dólar : R$ %.2f", dolar);
+    return 0;
 }
