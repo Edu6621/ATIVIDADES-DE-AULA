@@ -1,14 +1,14 @@
+/* 8) Escreva um algoritmo que peça para o usuário informar a sua idade e, em seguida, calcule e apresente o
+dobro e o triplo da idade informada.
+*/
 #include <stdio.h>
-
-int main()
-{
-    int i,a;
-    printf("informe sua idade ");
-    scanf("%i",&i);
-    printf("a idade é %i\n",i);
-    a=i*2;
-    printf("a dobro é %i\n",a);
-    a=i*3;
-    printf("a triplo é %i\n",a);
+int main () {
+    int idade, dobro, triplo;
+    printf ("informe sua idade : ");
+    scanf ("%i", &idade);
+    dobro=idade*2;
+    triplo=idade*3;
+    printf ("o dobro é : %i\n", dobro);
+    printf ("o triplo é : %i\n", triplo);
     return 0;
 }
