@@ -1,13 +1,18 @@
+/* 2) Escreva um algoritmo para ler dos valores para as variáveis A e B. O algoritmo deve efetuar a troca dos
+valores, de forma que a variável A passe a possuir o valor de B e a variável B passe a possuir o valor de
+A. O algoritmo deve apresentar os valores ao usuário, antes e depois da troca.
+*/
 #include <stdio.h>
-
-int main()
-{
-    float a,b;
-    printf("digite o primeiro valor:\n");
-    scanf("%f", &b);
-    printf("digite o segundo valor\n");
-    scanf("%f", &a);
-    printf("os números invertidos são %f %f ",a,b);
-
-    
+int main () {
+    float a, b, aux;
+    printf ("informe o valor de A : ");
+    scanf ("%f", &a);
+    printf ("informe o valor de B : ");
+    scanf ("%f", &b);
+    printf ("seus números eram : %.2f e %.2f \n", a, b);
+    aux=a;
+    a=b;
+    b=aux;
+    printf ("e agora são : %.2f e %.2f", a, b);
+    return 0;
 }
