@@ -1,17 +1,15 @@
+/* 4) Desenvolva um algoritmo para um programa que leia três valores inteiros e apresente como resultado
+o valor do quadrado da soma dos três valores lidos.
+*/
 #include <stdio.h>
-int main()
-{
-    int n,n1,n2,a,a1,a2,a3;
-    printf("digite um número inteiro");
-    scanf("%i",&n);
-    printf("digite outro número inteiro");
-    scanf("%i",&n1);
-    printf("digite outro número inteiro");
-    scanf("%i",&n2);
-    a=n+n1+n2;
-    a1=a*a;
-    printf("a soma desses números  é igual a %i e seu quadrado é %i",a,a1);
-    
-
-    return 0;
+int main () {
+    int a, b, c, soma;
+    printf ("informe um valor : ");
+    scanf ("%i", &a);
+    printf ("informe o segundo valor : ");
+    scanf ("%i", &b);
+    printf ("informe o terceiro valor : ");
+    scanf ("%i", &c);
+    soma=(a+b+c)*(a+b+c);
+    printf ("o valor final é : %i", soma);
 }
