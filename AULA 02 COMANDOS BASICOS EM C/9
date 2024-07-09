@@ -1,16 +1,18 @@
-#include  <stdio.h>
-int main(){
-    int i=0;
-    float id,a=0;
-        while (i < 4){
-            printf("digite uma idade");
-            scanf("%f",&id);
-            a=a+id;
-            i++;
-            
-                    }
-    a=a/4;
-    printf("a média de suas idades é igual a %2.f",a);    
-        
-        
-    }
+/* 9) Faça um algoritmo que solicite a idade de 4 pessoas. O algoritmo deve calcular a média aritmética das
+idades e apresentar o resultado na tela.
+*/
+#include <stdio.h>
+int main () {    
+    int a, b, c, d, media;
+    printf ("informe a primeira idade : ");
+    scanf ("%i", &a);
+    printf ("informe a segunda idade : ");
+    scanf ("%i", &b);
+    printf ("informe a terceira idade : ");
+    scanf ("%i", &c);
+    printf ("informe a quarta idade : ");
+    scanf ("%i", &d);
+    media=(a+b+c+d)/4;
+    printf ("a media das idades é : %i", media);
+    return 0;
+}
