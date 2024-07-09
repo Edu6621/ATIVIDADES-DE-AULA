@@ -1,20 +1,27 @@
+/* 5) Elabore um programa que leia dois valores e apresente os resultados das quatro operações aritméticas
+básicas realizadas entre eles. Exemplo:
+Entrada:
+	2 e 5
+Saída:
+	2 + 5 = 7
+	2 – 5 = -3
+	2 x 5 = 10
+	2 : 5 = 0,4
+*/
 #include <stdio.h>
-
-int main()
-{
-    int n,n1,a;
-    printf("Digite o primeiro número inteiro");
-    scanf("%i",&n);
-    printf("Digite o segundo número inteiro");
-    scanf("%i",&n1);
-    printf("a seguir está o resultado das 4 operações básicas");
-    a=n+n1;
-    printf("\n %i+%i=%i",n,n1,a);
-    a=n-n1;
-    printf("\n %i-%i=%i",n,n1,a);
-    a=n*n1;
-    printf("\n %iX%i=%i",n,n1,a);
-    a=n/n1;
-    printf("\n %i/%i=%i",n,n1,a);
+int main () {
+    float a, b, mais, menos, vezes, dividir;
+    printf ("informe um número : ");
+    scanf ("%f", &a);
+    printf ("informe o segundo número : ");
+    scanf ("%f", &b);
+    mais=a+b;
+    menos=a-b;
+    vezes=a*b;
+    dividir=a/b;
+    printf ("a soma dos valores é : %.2f\n", mais);
+    printf ("a subtração dos valores é : %.2f\n", menos);
+    printf ("a multiplicação dos valores é : %.2f\n", vezes);
+    printf ("a divisão dos valores é : %.2f\n", dividir);
     return 0;
 }
