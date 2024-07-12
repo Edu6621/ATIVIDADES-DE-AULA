@@ -20,4 +20,5 @@ int main () {
     td=pd/100*sb;
     sl=sb-td;
     printf ("horas trabalhadas : %i\nsalário bruto : %.2f\ndesconto : %.2f\nsalário líquido : %.2f\n", ht, sb, td, sl); 
+    return 0;
 }
