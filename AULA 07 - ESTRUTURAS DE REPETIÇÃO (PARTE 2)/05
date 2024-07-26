@@ -1,0 +1,23 @@
+/*5. Elaborar um programa que efetue a leitura sucessiva de valores numéricos e apresente no final o
+somatório, a média e o total de valores lidos. O programa deve fazer as leituras dos valores
+enquanto o usuário estiver fornecendo valores positivos. Ou seja, o programa deve parar quando
+o usuário entrar com um valor negativo. */
+#include <stdio.h>
+int main () {
+    int soma=0, a=0, contador=0;
+    float media;
+    while (a>=0){
+        printf ("informe um número : ");
+        scanf ("%i", &a);
+        if (a<0){
+            break;
+        }
+        soma+=a;
+        contador++;
+    }
+    media=soma/contador;
+    printf ("a soma deles é %i\n", soma);
+    printf ("a media deles é %.2f\n", media);
+    printf ("o total de valores lidos é %i", contador);
+    return 0;
+}
