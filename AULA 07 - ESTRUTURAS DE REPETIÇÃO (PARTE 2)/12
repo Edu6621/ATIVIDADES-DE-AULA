@@ -1,0 +1,28 @@
+/*12. Faça um programa em C para que um usuário adivinhe um número gerado aleatoriamente pelo
+programa. Inicialmente o programa gera um número aleatório entre 1 e 50 e armazena em uma
+variável. Depois o usuário deve informar números até acertar. Para ajudá-lo a descobrir, a cada
+tentativa o programa deve exibir uma mensagem do tipo “O número escolhido é maior” quando
+o número informado pelo usuário for maior que número gerado e uma mensagem do tipo “O
+número é menor” quando o usuário digitar um número maior que o número gerado. Ao acertar, o
+programa de mostrar uma mensagem apropriada e também mostrar o número de tentativas
+utilizadas. */
+#include <stdio.h>
+#include <stdlib.h>
+int main () {
+    int tentativa, contador=1;
+    int numeroAleatorio=rand() % 50;
+    while (1){
+        printf ("informe um número : ");
+        scanf ("%i", &tentativa);
+        if (tentativa==numeroAleatorio){
+            printf("Você acertou !!! foram %i tentativas", contador);
+            return 0;
+        }else if (tentativa>numeroAleatorio){
+            printf ("o número escolhido é menor !\n");
+        }else if (tentativa<numeroAleatorio){
+            printf ("o número escolhido é maior !\n");
+        }
+        contador++;
+    }
+        
+    }
