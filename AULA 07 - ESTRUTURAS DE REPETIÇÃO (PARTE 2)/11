@@ -1,0 +1,18 @@
+/* 11. Escreva um programa que calcule a média aritmética de um conjunto de números informados pelo
+usuário. O programa deve solicitar ao usuário quantos números ele deseja informar e, em seguida,
+solicitar cada um dos números.  */
+#include <stdio.h>
+int main () {
+    float cont, a, soma=0;
+    float media;
+    printf ("informe quantos números você deseja informar : ");
+    scanf ("%f", &cont);
+    for (int i=1; i<=cont; i++){
+        printf ("%i/%.0f : ", i, cont);
+        scanf ("%f", &a);
+        soma+=a;
+    }
+    media=soma/cont;
+    printf ("a média é : %.2f", media);
+    return 0;
+}
