@@ -1,0 +1,15 @@
+/*7. Escreva um programa que apresente os números da série Fibonacci até o décimo quinto termo. A
+série Fibonacci é iniciada por 0, 1. Os próximos termos são resultados das somas de seus 2
+antecessores*/
+#include <stdio.h>
+int main () {
+    int aux, soma=1, ante=0;
+    printf ("0 1 ");
+    for (int i=1; i<=13; i++){
+        aux=soma;
+        soma+=ante;
+        ante=aux;
+        printf ("%i ", soma);
+    }
+    return 0;
+}
