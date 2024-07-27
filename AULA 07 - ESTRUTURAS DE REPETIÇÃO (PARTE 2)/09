@@ -1,0 +1,25 @@
+/* 9. Faça um programa que leia números inteiros até que o valor zero seja informado, o qual deve ser
+desconsiderado. Após a leitura do valor zero, o programa deve mostrar quantos dos números
+informados são negativos e a média aritmética dos números maiores que zero.   */
+#include <stdio.h>
+int main () {
+    int a, negativos=0, soma=0, contador=0;
+    float media;
+    while (1){
+        printf ("informe um número : ");
+        scanf ("%i", &a);
+        if (a==0){
+            break;
+        }
+        if (a<0){
+            negativos++;
+        }else if (a>0){
+            soma+=a;
+            contador++;
+        }
+    }
+    media=soma/contador;
+    printf ("%i números são negativos\n", negativos);
+    printf ("a media dos números positivos é : %.2f", media);
+    return 0;
+}
