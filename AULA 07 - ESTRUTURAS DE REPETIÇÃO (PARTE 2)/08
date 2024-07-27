@@ -1,0 +1,25 @@
+/*8. Elaborar um programa que efetue a leitura de valores positivos inteiros até que um valor negativo
+seja informado. No final da execução do programa, devem ser apresentados o maior e o menor
+valor lido. */
+#include <stdio.h>
+int main () {
+    int a=1, contador =1, soma=0, maior, menor;
+    while (1){
+        printf ("informe um número : ");
+        scanf ("%i", &a);
+        if (a<0){
+            break;
+        }
+        if (contador == 1){
+            maior=a;
+            menor=a;
+            contador++;
+        }if (a>maior){
+            maior=a;
+        }else if (a<menor){
+            menor=a;
+        }
+    }
+    printf ("o maior é : %i\no menor é : %i", maior, menor);
+    return 0;
+}
