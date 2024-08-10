@@ -1,0 +1,24 @@
+/* 3. Faça um algoritmo que contenha um vetor de 20 elementos inteiros. As 10 primeiras posições do
+vetor devem ser preenchidas por valores informados pelo usuário. As 10 últimas posições do vetor
+devem ser preenchidas de maneira que, os elementos de índice par tenham o valor do índice + 2%, e
+os elementos de índice ímpar devem conter o valor do índice + 5%.
+Exemplo: vet[11] = 11 + 5%; vet[12] = 12 + 2% */
+#include <stdio.h>
+int main () {
+    int vet[20];
+    for (int i=0; i<20; i++){
+            printf ("%i) informe um valor : ", i+1);
+            scanf ("%i", &vet[i]);
+        if (i>=10){
+            if (i%2==0){
+                vet[i]*=1.02;
+            }
+            else {
+                vet[i]*=1.05;
+            }
+        }
+    }
+    for (int j=0; j<20; j++){
+        printf ("%i ", vet[j]);
+    }
+}
