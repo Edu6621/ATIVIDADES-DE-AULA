@@ -1,0 +1,85 @@
+/*2. Faça um programa que mostre uma tela com as seguintes opções:
+• 1 – Calcular Média,
+• 2 – Calcular Somatório,
+• 3 – Achar Maior Nota,
+• 4 – Achar Menor Nota,
+• 0 – Finalizar o programa.
+Cada uma das opções chamará um procedimento com a devida funcionalidade. Para fins de
+cálculo, estes testes se basearão em um vetor chamado notas de 10 posições que deve ser
+preenchido pelo usuário.*/
+#include <stdio.h>
+void media(float vet[], int tamanho) {
+    float soma=0, media;
+    for (int i=0; i<tamanho; i++){
+        soma+=vet[i];
+    }
+    media=soma/10.0;
+    printf ("===MÉDIA===\n");
+    printf ("A MÉDIA DESSES NÚMEROS É : %.2f\n\n", media);
+}
+
+void somatorio(float vet[], int tamanho) {
+    float soma=0;
+    for (int i=0; i<tamanho; i++){
+        soma+=vet[i];
+    }
+    printf ("===SOMATÓRIO===\n");
+    printf ("O SOMATÓRIO DESSES NÚMEROS É : %.2f\n\n", soma);
+}
+
+void maior(float vet[], int tamanho) {
+    float maior;
+    maior=vet[1];
+    for (int i=0; i<tamanho; i++){
+        if (vet[i]>maior){
+            maior=vet[i];
+        }
+    }
+    printf ("===MAIOR=NOTA===\n");
+    printf ("A MAIOR NOTA É : %.2f\n\n", maior);
+}
+void menor(float vet[], int tamanho) {
+    float menor;
+    menor=vet[1];
+    for (int i=0; i<tamanho; i++){
+        if (vet[i]<menor){
+            menor=vet[i];
+        }
+    }
+    printf ("===MENOR=NOTA===\n");
+    printf ("A MENOR NOTA É : %.2f\n\n", menor);
+}
+
+int main () {
+    int num=1, tamanho=10;
+    float vet[10];
+    for (int i=0; i<10; i++){
+        printf ("%i ) informe um valor : ", i+1);
+        scanf ("%f", &vet[i]);
+    }
+    while (num!=0){
+        printf ("ESCOLHA UMA OPÇÃO :\n");
+        printf ("• 1 - Calcular Média\n• 2 - Calcular Somatório\n• 3 - Achar Maior Nota\n• 4 - Achar Menor Nota\n• 0 - Finalizar o programa\n");
+        scanf ("%i", &num);
+        switch (num){
+            case 1:
+            media(vet, tamanho);
+            break;
+            case 2:
+            somatorio(vet, tamanho);
+            break;
+            case 3:
+            maior(vet, tamanho);
+            break;
+            case 4:
+            menor(vet, tamanho);
+            break;
+            case 0:
+            printf ("PROGRAMA FINALIZADO !");
+            break;
+            default:
+            printf ("erro");
+            break;
+        }
+    }    
+}
