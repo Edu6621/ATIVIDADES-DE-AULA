@@ -1,0 +1,113 @@
+/* 6. Faça um programa que mostre uma tela com as seguintes opções:
+• 1 – Dobro,
+• 2 – Triplo,
+• 3 – Metade,
+• 4 – Quadrado,
+• 5 – Cubo,
+• 6 – Raiz Quadrada,
+• 7 – Raiz Cúbica,
+• 8 – Módulo,
+• 9 – Inverso e
+• 0 – Sair do Programa.
+Cada uma das opções chamará um procedimento com a devida funcionalidade. Para fins de
+cálculo, estes testes se basearão em um número inteiro N informado pelo usuári */
+#include <stdio.h>
+#include <math.h>
+int dobro (int n){
+    int dobroo;
+    dobroo=n*2;
+    return dobroo;
+}
+int triplo (int n){
+    int triploo;
+    triploo=n*3;
+    return triploo;
+}
+int metade (int n){
+    int metadee;
+    metadee=n/2;
+    return metadee;
+}
+int quadrado (int n){
+    int quadradoo;
+    quadradoo=n*n;
+    return quadradoo;
+}
+int cubo (int n){
+    int cuboo;
+    cuboo=n*n*n;
+    return cuboo;
+}
+float raizq (float n){
+    float raizqq;
+    raizqq=sqrt(n);
+    return raizqq;
+}
+float raizc (float n){
+    float raizcc;
+    raizcc=pow(n, 1.0 / 3.0);
+    return raizcc;
+}
+int modulo (int n){
+    int moduloo;
+    int resto;
+    printf ("informe outro número : ");
+    scanf ("%i", &resto);
+    moduloo = n%resto;
+    return moduloo;
+}
+int inverso (int n){
+    int inversoo;
+    inversoo=n;
+    return inversoo;
+}
+int main () {
+    int n, a=1;
+    printf ("informe um número : ");
+    scanf ("%i", &n);
+    while (a!=0){
+        printf ("escolha uma das opções :\n• 1 – Dobro\n• 2 – Triplo\n• 3 – Metade\n• 4 – Quadrado\n• 5 – Cubo\n• 6 – Raiz Quadrada\n• 7 – Raiz Cúbica\n• 8 – Módulo\n• 9 – Inverso e\n• 0 – Sair do Programa\n");
+        scanf ("%i", &a);
+        switch (a){
+            case 1:
+            int dobroo = dobro (n);
+            printf ("O resultado é : %i\n\n", dobroo);
+            break;
+            case 2:
+            int triploo = triplo (n);
+            printf ("O resultado é : %i\n\n", triploo);
+            break;
+            case 3:
+            int metadee = metade (n);
+            printf ("O resultado é : %i\n\n", metadee);
+            break;
+            case 4:
+            int quadradoo = quadrado (n);
+            printf ("O resultado é : %i\n\n", quadradoo);
+            break;
+            case 5:
+            int cuboo = cubo (n);
+            printf ("O resultado é : %i\n\n", cuboo);
+            break;
+            case 6:
+            float raizqq = raizq (n);
+            printf ("O resultado é : %.2f\n\n", raizqq);
+            break;
+            case 7:
+            float raizcc = raizc (n);
+            printf ("O resultado é : %.2f\n\n", raizcc);
+            break;
+            case 8:
+            int moduloo = modulo (n);
+            printf ("O resultado é : %i\n\n", moduloo);
+            break;
+            case 9:
+            int inversoo = inverso (n);
+            printf ("O resultado é : 1/%i\n\n", inversoo);
+            break;
+            case 0:
+            printf ("Programa encerrado !!");
+            break;
+        }
+    }
+}
