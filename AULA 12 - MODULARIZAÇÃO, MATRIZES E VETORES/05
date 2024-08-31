@@ -38,10 +38,29 @@ void apresentar (int matriz[5][5]){
     }
 }
 void trocar_duas_linhas (int matriz[5][5]){
-    
+    int l1, l2, temp;
+    printf ("informe a linha 1 : ");
+    scanf ("%i", &l1);
+    printf ("informe a linha 2 :");
+    scanf ("%i", &l2);
+    for (int i=0; i<5; i++){
+        temp=matriz[l1][i];
+        matriz[l1][i]=matriz[l2][i];
+        matriz[l2][i]=temp;
+    }
+
 }
 void trocar_duas_colunas (int matriz[5][5]){
-    
+    int c1, c2, temp;
+    printf ("informe a coluna 1 : ");
+    scanf ("%i", &c1);
+    printf ("informe a coluna 2 :");
+    scanf ("%i", &c2);
+    for (int i=0; i<5; i++){
+        temp=matriz[i][c1];
+        matriz[i][c1]=matriz[i][c2];
+        matriz[i][c2]=temp;
+    }
 }
 void trocar_linha_para_coluna (int matriz[5][5]){
     int linha, coluna;
@@ -126,8 +145,7 @@ int main () {
             default:
             printf ("número incorreto\n");
             break;
-
         }
-
     } while (a!=0);
+    return 0;
 }
