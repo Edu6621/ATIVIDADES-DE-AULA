@@ -44,9 +44,38 @@ void trocar_duas_colunas (int matriz[5][5]){
     
 }
 void trocar_linha_para_coluna (int matriz[5][5]){
+    int linha, coluna;
+    int temp[5];
+    printf ("informe a linha : ");
+    scanf ("%i", &linha);
+    printf ("informe a coluna : ");
+    scanf ("%i", &coluna);
+    
+    for (int i=0; i<5; i++){
+            temp[i]=matriz[linha][i];
+    }
+    for (int i=0; i<5; i++){
+        for (int j=0; j<5; j++){
+            matriz[i][coluna]=temp[i];
+        }
+    }
     
 }
 void trocar_coluna_para_linha (int matriz[5][5]){
+    int temp[5];
+    int linha, coluna;
+    printf ("informe a coluna : ");
+    scanf ("%i", &coluna);
+    printf ("informe a linha : ");
+    scanf ("%i", &linha);
+    for (int i=0; i<5; i++){
+            temp[i]=matriz[i][coluna];
+    }
+    for (int i=0; i<5; i++){
+        for (int j=0; j<5; j++){
+            matriz[linha][i]=temp[i];
+        }
+    }
     
 }
 
