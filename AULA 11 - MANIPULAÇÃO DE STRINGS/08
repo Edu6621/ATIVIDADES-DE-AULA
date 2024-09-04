@@ -1,0 +1,32 @@
+//8. Faça um programa que leia uma string e remova todos os espaços em branco da string
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char string[50];
+    int i, j;
+
+    printf("Informe uma string: ");
+    fgets(string, sizeof(string), stdin);
+    size_t len = strlen(string);
+    if (len > 0 && string[len - 1] == '\n') {
+        string[len - 1] = '\0';
+    }
+
+    i = 0;
+    j = 0;
+    
+    while (string[i] != '\0') {
+        if (string[i] != ' ') {
+            string[j] = string[i];
+            j++;
+        }
+        i++;
+    }
+
+    string[j] = '\0';
+
+    printf("String sem espaços: \"%s\"\n", string);
+
+    return 0;
+}
