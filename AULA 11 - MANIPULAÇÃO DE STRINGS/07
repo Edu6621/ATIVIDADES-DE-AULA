@@ -1,0 +1,30 @@
+/*7. Crie um programa que leia uma string e substitua todas as ocorrências de um caractere por outro,
+conforme a escolha do usuário. */
+#include <stdio.h>
+#include <string.h>
+void troca (char *string){
+    char antigo, novo;
+    int i=0;
+    printf ("informe o caractere antigo para ser trocado : ");
+    scanf (" %c", &antigo);
+    printf ("informe o caractere novo : ");
+    scanf (" %c", &novo);
+    while (string[i]!='\0'){
+        if (string[i]==antigo){
+            string[i] = novo;
+        }
+        i++;
+    }
+    printf ("%s", string);
+    
+}
+int main () {
+    char string[50];
+    printf ("informe uma string : ");
+    fgets(string, sizeof(string), stdin);
+    size_t len = 0;
+    while (string[len] != '\0') {
+        len++;
+    }  
+    troca(string);
+}
